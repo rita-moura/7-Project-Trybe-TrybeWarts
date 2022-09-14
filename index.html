@@ -8,8 +8,21 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header"> 
         <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="logo Trybewarts">
+        <form class="trybewarts-login" action="" method="get">
+            <div>
+                <label for="email-login">Digite sua senha:</label>
+                <input class="input-login" type="email" name="email" placeholder="Email" id="email-login" value="">
+            </div>
+            <div>
+                <label for="password-login">Digite seu e-mail:</label>
+                <input class="input-login" type="password" name="password" placeholder="Senha" id="password-login" value="">
+            </div>
+            <div class="button-submit">
+                <button class="submit" type="submit">Entrar</button>   
+            </div>
+        </form>
     </header>
     <script src="/script.js"></script>
 </body>
