@@ -29,3 +29,14 @@
   display: flex;
   height: 500px;
 }
+
+.input-radios {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-checkboxs {
+  display: flex;
+  flex-direction: column;
+}
+
