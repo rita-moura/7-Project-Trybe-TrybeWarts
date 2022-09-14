@@ -14,3 +14,18 @@
 .input-login {
   margin: 2px;
 }
+
+.main-container {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+}
+
+#trybewarts-forms-logo {
+  display: flex;
+  height: 500px;
+}
