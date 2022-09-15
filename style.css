@@ -52,6 +52,10 @@ body {
   font-family: OCR A Std, monospace;
 }
 
+#label-casa {
+  font-family: OCR A Std, monospace;
+}
+
 select {
   font-family: OCR A Std, monospace;
   padding: 2px;
