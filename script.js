@@ -50,7 +50,7 @@ function getForm() {
   liDados.appendChild(textAreaDados);
   getOl.appendChild(liDados);
 }
-console.log(getForm());
+getForm();
 
 getButtonLogin.addEventListener('click', login);
 getInputChackbox.addEventListener('click', submitForms);
