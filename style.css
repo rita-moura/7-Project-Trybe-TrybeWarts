@@ -92,7 +92,8 @@ select {
 }
 
 .subject {
-  width: 30%;
+  width: 60%;
+  margin: 2.5px;
 }
 
 #label-rate {
@@ -104,6 +105,21 @@ select {
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.label-conteudo {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+.container-conteudo {
+  display: flex;
+}
+
+.input-subject {
+  display: flex;
+  flex-direction: column;
 }
 
 .input-radio-buttons {
