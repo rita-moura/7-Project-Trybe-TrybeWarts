@@ -1,7 +1,18 @@
+body {
+  margin: 0%;
+}
+
 .header {
   background-color: rgb(50, 167, 145);
   height: 100px;
   display: flex;
+  margin-bottom: 20px;
+}
+
+#trybewarts-header-title {
+  margin-left: 30px;
+  margin-top: 30px;
+  font-family: OCR A Std, monospace;
 }
 
 .trybewarts-login {
@@ -9,34 +20,119 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+  margin-left: 55%;
+}
+
+.button-submit {
+  border-radius: 4px;
+  color: black;
+  padding: 10px 20px;
+  margin-left: 65%;
 }
 
 .input-login {
   margin: 2px;
 }
 
+.nome-sobrenome {
+  margin-bottom: 10px;
+  font-family: OCR A Std, monospace;
+}
+
+#input-name {
+  margin-right: 10px;
+}
+
+#input-email {
+  margin-right: 10px;
+}
+
+#inputemail {
+  font-family: OCR A Std, monospace;
+}
+
+select {
+  font-family: OCR A Std, monospace;
+  padding: 2px;
+}
+
 .main-container {
   display: flex;
+  margin-left: 30px;
 }
 
 #evaluation-form {
   display: flex;
-  width: 675px;
   flex-direction: column;
+  width: 675px;
 }
 
 #trybewarts-forms-logo {
   display: flex;
   height: 500px;
+  margin-left: 250px;
 }
 
 .input-radios {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+  width: 50%;
+}
+
+#label-family {
+  font-family: OCR A Std, monospace;
+  margin-bottom: 10px;
+}
+
+#label-content {
+  margin-bottom: 15px;
+  font-family: OCR A Std, monospace;
+
+}
+
+.subject {
+  width: 30%;
+}
+
+#label-rate {
+  font-family: OCR A Std, monospace;
 }
 
 .input-checkboxs {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+.input-radio-buttons {
+  margin-top: 20px;
+}
+
+.text-area {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: OCR A Std, monospace;
+  width: 675px;
+}
+
+#label-infos {
+  font-family: OCR A Std, monospace;
+}
+
+#submit-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 2%;
+  width: 10%;
+  margin-left: 2%;
+}
+
+footer {
+  margin-left: 30px;
+  margin-bottom: 50px;
+  font-family: FreeMono, monospace;
+}

@@ -13,11 +13,11 @@
         <h1 id="trybewarts-header-title">Trybewarts</h1>
         <form class="trybewarts-login" action="" method="get">
             <div>
-                <label for="email-login">Senha:</label>
+                <label for="email-login">E-mail:</label>
                 <input class="input-login" type="email" name="email" placeholder="Email" id="email-login" value="">
             </div>
             <div>
-                <label for="password-login">E-mail:</label>
+                <label for="password-login">Senha:</label>
                 <input class="input-login" type="password" name="password" placeholder="Senha" id="password-login" value="">
             </div>
             <div class="button-submit">
@@ -27,14 +27,14 @@
     </header>
     <main class="main-container">
         <form id="evaluation-form" action="">
-            <div>
-                <label for="input-name">Nome:</label>
+            <div class="nome-sobrenome">
+                <label for="input-name"><b>Nome:</b></label>
                 <input type="text" name="" id="input-name" placeholder="Nome">
-                <label for="input-lastname">Sobrenome:</label>
+                <label for="input-lastname"><b>Sobrenome:</b></label>
                 <input type="text" name="" id="input-lastname" placeholder="Sobrenome">
             </div>
             <div>
-                <label for="input-email">Email:</label>
+                <label id="inputemail" for="input-email"><b>Email:</b></label>
                 <input type="text" name="" id="input-email" placeholder="Email">
                 <select name="select" id="house">
                     <option id="gitnoria-house" value="Gitnória" >Gitnória</option>
@@ -44,13 +44,16 @@
                 </select>
             </div>
             <div class="input-radios">
-                <label id="label-family" for="">Qual sua família?</label>
+                <label id="label-family" for=""><b>Qual sua família?</b></label>
+                <label for="">Frontend</label>
                 <input type="radio" name="family" value="Frontend">
+                <label for="">Backend</label>
                 <input type="radio" name="family" value="Backend">
+                <label for="">FullStack</label>
                 <input type="radio" name="family" value="FullStack">
             </div>
             <div class="input-checkboxs">
-                <label id="label-content" for="">Qual conteúdo você está com mais vontade de aprender?</label>
+                <label id="label-content" for=""><b>Qual conteúdo você está com mais vontade de aprender?</b></label>
                 <input class="subject" type="checkbox" value="HoFs">HoFs
                 <input class="subject" type="checkbox" value="Jest">Jest
                 <input class="subject" type="checkbox" value="Promises">Promises
@@ -58,8 +61,9 @@
                 <input class="subject" type="checkbox" value="SQL">SQL
                 <input class="subject" type="checkbox" value="Python">Python
             </div>
-            <div class="input-radio-buttons">
-                <label id="label-rate" for="">Como você avalia a Trybewarts?</label>
+            <div>
+            <class class="input-radio-buttons">
+                <label id="label-rate" for=""><b>Como você avalia a Trybewarts?</b></label>
                 <input type="radio" value="1" name="rate">1
                 <input type="radio" value="2" name="rate">2
                 <input type="radio" value="3" name="rate">3
@@ -72,16 +76,16 @@
                 <input type="radio" value="10" name="rate">10
             </div>
             <div class="text-area">
-                <label class="textarea" for="">Deixe seu comentário:</label>
+                <label class="textarea" for=""><b>Deixe seu comentário:</b></label>
                 <textarea name="" id="" cols="30" rows="10" maxlength="500"></textarea>
             </div>
             <div>
-                <label id="label-infos" for="">Você concorda com o uso das informações acima?</label>
+                <label id="label-infos" for=""><b>Você concorda com o uso das informações acima?</b></label>
                 <input type="checkbox" name="" id="agreement" required>
             </div>
-            <button type="submit" id="submit-btn">Enviar</button>
+            <button id="submit-btn" type="submit"><b>Enviar</b></button>
         </form>
-        <div>
+        <div id="img-trybewarts">
             <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="logo forms Trybewarts">
         </div>
     </main>
