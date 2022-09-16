@@ -141,6 +141,10 @@ select {
   width: 675px;
 }
 
+#textarea {
+  resize: none;
+}
+
 #label-infos {
   font-family: OCR A Std, monospace;
 }
