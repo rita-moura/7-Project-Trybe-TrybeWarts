@@ -6,12 +6,17 @@ const getTextarea = document.querySelector('#textarea');
 const getCounter = document.querySelector('#counter');
 const getNome = document.querySelector('#input-name');
 const getSobrenome = document.querySelector('#input-lastname');
-const getEmail = document.querySelector('#input-email');
-const getOl = document.querySelector('#ol-dados-forms');
-const getHome = document.querySelector('#label-casa');
-const getFamily = document.querySelector('#label-family');
-const getContent = document.querySelector('#label-content');
+const getUl = document.querySelector('#ul-dados-forms');
+const getEmail = document.querySelector('.E-mail');
+const getFamily = document.querySelectorAll('.family');
+const getSubjects = document.querySelectorAll('.subject');
 const getButtonLogin = document.querySelector('.submit');
+
+function creatElement(element, text) {
+  const newElement = document.createElement(element);
+  newElement.innerText = text;
+  return newElement;
+}
 
 function login() {
   if (getInputEmail.value === 'tryber@teste.com' && getInputPassword.value === '123456') {
@@ -31,24 +36,31 @@ function counterTextarea() {
   getCounter.textContent = countDecrement;
 }
 
+function getValueFamily() {
+  for (let index = 0; index < getFamily.length; index += 1) {
+    if (getFamily[index].checked) {
+      return getFamily[index].value;
+    }
+  }
+}
+
+function getSubjectsValue() {
+  let subjects = '';
+  for (let index = 0; index < getSubjects.length; index += 1) {
+    if (getSubjects[index].checked) {
+      subjects += getSubjects[index].value;
+      return subjects;
+    }
+  }
+}
+
 function getForm(event) {
   event.preventDefault();
-  const textNome = document.createElement('li');
-  const textEmail = document.createElement('li');
-  const textHomeFamily = document.createElement('li');
-  const textContent = document.createElement('li');
-  const textAreaDados = document.createElement('li');
-  textNome.innerText = `Nome: ${getNome.value} ${getSobrenome.value}`;
-  textEmail.innerText = `Email: ${getEmail.value}`;
-  console.log(textEmail);
-  textHomeFamily.innerText = `Casa: ${getHome.value} Família: ${getFamily.value}`;
-  textContent.innerText = `Matérias: ${getContent.value}`;
-  textAreaDados.innerText = `Observações: ${getTextarea.value}`;
-  getOl.appendChild(textNome);
-  getOl.appendChild(textEmail);
-  getOl.appendChild(textHomeFamily);
-  getOl.appendChild(textContent);
-  getOl.appendChild(textAreaDados);
+  getUl.appendChild(creatElement('li', `Nome: ${getNome.value} ${getSobrenome.value}`));
+  getUl.appendChild(creatElement('li', `Email: ${getEmail.value}`));
+  getUl.appendChild(creatElement('li', `Família: ${getValueFamily()}`));
+  getUl.appendChild(creatElement('li', `Matérias: ${getSubjectsValue()}`));
+  getUl.appendChild(creatElement('li', `Observações: ${getTextarea.value}`));
 }
 
 getButtonLogin.addEventListener('click', login);
