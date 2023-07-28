@@ -13,11 +13,9 @@
         <h1 id="trybewarts-header-title">Trybewarts</h1>
         <form class="trybewarts-login" action="" method="get">
             <div>
-                <label for="email-login">E-mail:</label>
                 <input class="input-login" type="email" name="email" placeholder="Email" id="email-login" value="">
             </div>
             <div>
-                <label for="password-login">Senha:</label>
                 <input class="input-login" type="password" name="password" placeholder="Senha" id="password-login" value="">
             </div>
             <div class="button-submit">
@@ -28,15 +26,11 @@
     <main class="main-container">
         <form id="evaluation-form" action="">
             <div class="nome-sobrenome">
-                <label for="input-name"><b>Nome:</b></label>
                 <input type="text" name="" id="input-name" placeholder="Nome">
-                <label for="input-lastname"><b>Sobrenome:</b></label>
                 <input type="text" name="" id="input-lastname" placeholder="Sobrenome">
             </div>
             <div>
-                <label id="input-email" for="input-email"><b>Email:</b></label>
                 <input class="E-mail" type="email" name="" id="input-email" placeholder="Email" value=" ">
-                <label id="house" for=""><b>Casa:</b></label>
                 <select name="select" id="house">
                     <option class="select-home" id="gitnoria-house" value="Gitnória" >Gitnória</option>
                     <option class="select-home" id="reactpuff-house" value="Reactpuff">Reactpuff</option>
@@ -117,9 +111,15 @@
             </div>
             <button id="submit-btn" type="submit"><b>Enviar</b></button>
         </form>
-        <section id="form-data">
-            <ul id="ul-dados-forms"></ul>
-        </section>
+        <form id="form-data">
+            <p id="name"></p>
+            <p id="email"></p>
+            <p id="houseSelect"></p>
+            <p id="family"></p>
+            <p id="matter"></p>
+            <p id="assessments"></p>
+            <p id="comments"></p>
+        </form>
         <section id="img-trybewarts">
             <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="logo forms Trybewarts">
         </section>

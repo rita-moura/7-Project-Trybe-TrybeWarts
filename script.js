@@ -4,19 +4,9 @@ const getButtonFormsSubmit = document.querySelector('#submit-btn');
 const getInputChackbox = document.querySelector('#agreement');
 const getTextarea = document.querySelector('#textarea');
 const getCounter = document.querySelector('#counter');
-const getNome = document.querySelector('#input-name');
-const getSobrenome = document.querySelector('#input-lastname');
-const getUl = document.querySelector('#ul-dados-forms');
-const getEmail = document.querySelector('.E-mail');
-const getFamily = document.querySelectorAll('.family');
+const getEvaluationForm = document.querySelector('#evaluation-form');
 const getSubjects = document.querySelectorAll('.subject');
 const getButtonLogin = document.querySelector('.submit');
-
-function creatElement(element, text) {
-  const newElement = document.createElement(element);
-  newElement.innerText = text;
-  return newElement;
-}
 
 function login() {
   if (getInputEmail.value === 'tryber@teste.com' && getInputPassword.value === '123456') {
@@ -36,37 +26,46 @@ function counterTextarea() {
   getCounter.textContent = countDecrement;
 }
 
-function getValueFamily() {
-  for (let index = 0; index < getFamily.length; index += 1) {
-    if (getFamily[index].checked) {
-      return getFamily[index].value;
-    }
-  }
-}
-
 function getSubjectsValue() {
-  let subjects = '';
-  for (let index = 0; index < getSubjects.length; index += 1) {
-    if (getSubjects[index].checked) {
-      subjects += getSubjects[index].value;
-      return subjects;
+  const subjects = [];
+  let string = 'Matérias: ';
+
+  getSubjects.forEach((subject) => {
+    if (subject.checked) subjects.push(subject.value);
+  });
+
+  for (let index = 0; index < subjects.length; index += 1) {
+    string += `${subjects[index]}`;
+    if (index !== subjects.length - 1) {
+      string += ', ';
     }
   }
+  return string;
 }
 
-function getForm(event) {
+function createFormData(event) {
+  const getName = document.querySelector('#input-name').value;
+  const getLastName = document.querySelector('#input-lastname').value;
+  const getAssessment = document.querySelector('input[name="rate"]:checked').value;
+  const getFamily = document.querySelector('input[name="family"]:checked').value;
+  const getEmail = document.querySelector('.E-mail').value;
+  const getTextareaObs = document.querySelector('#textarea').value;
+  const getHouse = document.querySelector('#house').value;
   event.preventDefault();
-  getUl.appendChild(creatElement('li', `Nome: ${getNome.value} ${getSobrenome.value}`));
-  getUl.appendChild(creatElement('li', `Email: ${getEmail.value}`));
-  getUl.appendChild(creatElement('li', `Família: ${getValueFamily()}`));
-  getUl.appendChild(creatElement('li', `Matérias: ${getSubjectsValue()}`));
-  getUl.appendChild(creatElement('li', `Observações: ${getTextarea.value}`));
+  getEvaluationForm.style.display = 'none';
+  document.querySelector('#name').innerText = `Nome:  ${getName} ${getLastName}`;
+  document.querySelector('#email').innerText = `Email:  ${getEmail}`;
+  document.querySelector('#houseSelect').innerText = `Casa: ${getHouse}`;
+  document.querySelector('#family').innerText = `Família:  ${getFamily}`;
+  document.querySelector('#matter').innerText = getSubjectsValue();
+  document.querySelector('#assessments').innerText = `Avaliação:  ${getAssessment}`;
+  document.querySelector('#comments').innerText = `Observações:  ${getTextareaObs}`;
 }
 
 getButtonLogin.addEventListener('click', login);
 getInputChackbox.addEventListener('click', submitForms);
 getTextarea.addEventListener('input', counterTextarea);
-getButtonFormsSubmit.addEventListener('click', getForm);
+getButtonFormsSubmit.addEventListener('click', createFormData);
 
 window.onload = function disableButton() {
   getButtonFormsSubmit.disabled = true;
